@@ -1,0 +1,35 @@
+[debug] [2021-04-17T19:47:36.202Z] ----------------------------------------------------------------------
+[debug] [2021-04-17T19:47:36.221Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ideal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2021-04-17T19:47:36.222Z] CLI Version:   9.9.0
+[debug] [2021-04-17T19:47:36.232Z] Platform:      win32
+[debug] [2021-04-17T19:47:36.233Z] Node Version:  v14.15.1
+[debug] [2021-04-17T19:47:36.276Z] Time:          Sun Apr 18 2021 01:17:36 GMT+0530 (India Standard Time)
+[debug] [2021-04-17T19:47:36.277Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-17T19:47:36.370Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-17T19:47:36.371Z] > authorizing via signed-in user (rishabhd1121@gmail.com)
+[debug] [2021-04-17T19:47:36.371Z] [iam] checking project e-clone-824fd for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-04-17T19:47:36.376Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-17T19:47:36.377Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-17T19:47:40.039Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sat, 17 Apr 2021 19:47:40 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-17T19:47:40.118Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/e-clone-824fd:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-04-17T19:47:51.240Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com
+[debug] [2021-04-17T19:47:51.245Z] > refreshing access token with scopes: []
+[debug] [2021-04-17T19:47:51.246Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-17T19:47:51.556Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sat, 17 Apr 2021 19:47:52 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-17T19:47:51.689Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/e-clone-824fd [none]
+[debug] [2021-04-17T19:48:02.783Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/e-clone-824fd
+[debug] [2021-04-17T19:48:23.852Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/e-clone-824fd
+    at Client.doRequest (C:\Users\ideal\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:211:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Client.request (C:\Users\ideal\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\ideal\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\ideal\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\ideal\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\ideal\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:66:9)
+    at async C:\Users\ideal\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project e-clone-824fd. Please make sure the project exists and your account has permission to access it.
